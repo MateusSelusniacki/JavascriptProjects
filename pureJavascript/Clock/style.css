@@ -1,0 +1,71 @@
+/*https://produto.mercadolivre.com.br/MLB-2813801528-relogio-de-mesa-digital-c-despertador-light-sensor-original-_JM?matt_tool=40343894&matt_word=&matt_source=google&matt_campaign_id=14303413655&matt_ad_group_id=133855953276&matt_match_type=&matt_network=g&matt_device=c&matt_creative=584156655519&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=601915420&matt_product_id=MLB2813801528&matt_product_partition_id=1816238256222&matt_target_id=aud-1008379684294:pla-1816238256222&gclid=Cj0KCQiApKagBhC1ARIsAFc7Mc77cgbuzVrExrQaAi7pfWP60IYHpAA5XswIKjfHY-X5AVpt_TipVZwaAmHEEALw_wcB*/
+@font-face{
+    font-family: 'DS-DIGIB';
+    src: local('DS-DIGIB.ttf') format('truetype');
+}
+
+span{
+    font-family: 'DS-DIGIB';
+}
+
+.container{
+    position: absolute; /* define a posição do elemento filho */
+    top: 50%; /* posiciona o elemento filho no meio da div pai */
+    left: 50%; /* posiciona o elemento filho no meio da div pai */
+    transform: translate(-50%, -50%); /* centraliza o elemento filho */
+    width: 340px;
+    height: 150px;
+    background-color: black; 
+    border-radius: 65px;  
+}
+
+.content{
+    position: absolute; /* define a posição do elemento filho */
+    top: 50%; /* posiciona o elemento filho no meio da div pai */
+    left: 50%; /* posiciona o elemento filho no meio da div pai */
+    transform: translate(-50%, -50%); /* centraliza o elemento filho */
+    width: 250px;
+    height: 100px;
+    background: linear-gradient(
+        to right,
+        #61b0ff 0%,
+        #95c2ee 30%,
+        #e2e2e2 50%,
+        #95c2ee 70%,
+        #61b0ff 100%    
+    );
+}
+
+.row{
+    position:absolute;
+    left:35%;
+    top:50%;
+    transform: translate(-50%, -50%); /* centraliza o elemento filho */
+    font-size: xx-large;
+    
+}
+
+.seconds{
+    font-size: 15px;
+}
+
+.secondaryContent{
+    position:relative;
+    left:70%;
+}
+
+.subRow{
+    font-size: 17px;
+}
+
+.subRowHeader{
+    font-size: 8px;
+}
+
+.subRowSpan{
+    font-size:15px;
+}
+
+.point{
+    font-size: 12px;
+}

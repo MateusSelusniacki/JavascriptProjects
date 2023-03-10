@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+    <title>Clock</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <span id="hours"></span><span class="dots">:</span><span id="minutes"></span><span class="dot">.</span><span id="seconds" class="seconds"></span>
+            </div>
+            <div class="secondaryContent">
+                <div class="subRow">
+                    <div class="subRowHeader">
+                        <span>ALARM</span>
+                    </div>
+                    <span>&nbsp&nbsp&nbsp</span>
+                    <span id="alarmTime" class="subRowSpan">--:--</span>
+                </div>
+                <div class="subRow">
+                    <div class="subRowHeader">
+                        <span >MONTH    &nbsp&nbsp DATE</span> 
+                    </div>
+                    <span>&nbsp&nbsp</span>
+                    <span id="month"></span>
+                    <span>/&nbsp</span>
+                    <span id="date"></span>
+                </div>
+                <div class="subRow">
+                    <div class="subRowHeader">
+                        <span>TEMP   °C</span>
+                    </div>
+                    <span>&nbsp&nbsp</span>
+                    <span id="tempAbs"></span>
+                    <span>.</span>
+                    <span id="tempPoint" class="point"></stempPointpan>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
