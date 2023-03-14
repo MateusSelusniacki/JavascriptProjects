@@ -1,0 +1,236 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8"/>
+        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <section id="header">
+                <div class="row">
+                    <h1>Tasks</h1>
+                </div>
+                <div class="row">
+                    <button class="addButton">+ New List</button>
+                </div>
+            </section>
+            <section id="content">
+
+            </section>
+            <section id="footer">
+                <div class="row icons-container">
+                    <div class="col">
+                        <img class="icon" src="images/listsIcon.png" data-target="lists">
+                        <nav id="lists" class="submenu">
+                            <ul class="submenuList">
+                                <li>+ Create new list</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col">
+                        <img class="icon" src="images/changeListOrder.png" data-target="order">
+                        <nav id="order" class="submenu">
+                            <ul class="submenuList">
+                                <li>My order</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col">
+                        <img class="icon" src="images/commands.png" data-target="commands">
+                        <nav id="commands" class="submenu">
+                            <ul class="submenuList">
+                                <li>Rename list</li>
+                                <li>Delete list</li>
+                                <li>Delete all completed tasks</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col add">
+                        <img class="icon" src="images/add.png" data-target="newList">
+                        <nav id="newList" class="submenu">
+                            <ul class="submenuList">
+                                <li>
+                                    <input id="newListFromFotter">
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="main.js"></script>
+    </html>
+
+    const submenus = document.querySelectorAll('.submenu');
+    let isIcon = false
+    // adiciona um evento de clique no documento
+    document.addEventListener('click', event => {
+        // se o clique não foi em um icone
+        if(!isIcon){
+            // esconde todos os submenus
+            submenus.forEach(submenu => submenu.classList.remove('show'));
+        }
+        else{
+            isIcon = false
+        }
+    });
+
+    // seleciona todos os ícones
+    const icons = document.querySelectorAll('.icon');
+    console.log(icons)
+
+    function setSubmenusClean(){
+        icons.forEach(icon =>{
+            let dataTarget = icon.getAttribute('data-target');
+            let target = document.getElementById(dataTarget);
+            if(target.classList.contains("show")){
+                console.log(target)
+                target.classList.toggle("show")
+            }
+        });
+
+    }
+
+    // para cada ícone, adiciona um listener de evento de clique
+    icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            // obtém o ID do submenu alvo
+            const targetId = icon.getAttribute('data-target');
+            const target = document.getElementById(targetId);
+            isIcon = true
+            // remove todos os submenus ativos
+            setSubmenusClean()
+
+            // adiciona ou remove a classe "show" do submenu
+            target.classList.toggle('show');
+        });
+    });
+    
+
+    h1{
+        position:relative;
+        left:50%;   
+    }
+
+    button{
+        background-color: black;
+        color:white;
+        border:none;
+        margin-bottom:2px;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    li{
+        padding: 10px;
+    }
+
+    button:hover{
+        background-color:#333333;
+    }
+
+    button:active{
+        border:1px solid #555555;
+        background-color: #444444;
+        margin-bottom:0px;
+    }
+
+    img.icon{
+        width:30px;
+        height:30px;
+    }
+    img.icon:hover{
+        background-color: lightgray;
+    }
+
+    body{
+        background-color: lightgray;
+    }
+
+    .container{
+        position: absolute; /* define a posição do elemento filho */
+        width:70%;
+        height:100%;
+        left: 50%; /* posiciona o elemento filho no meio da div pai */
+        transform: translate(-50%, 0%); /* centraliza o elemento filho */
+        background-color: white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .content{
+        position: relative; /* define a posição do elemento filho */
+        left: 50%; /* posiciona o elemento filho no meio da div pai */
+        transform: translate(-50%, -50%); /* centraliza o elemento filho */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        padding-bottom: 25px;
+    }
+
+    #header{
+        top:0%;
+        background-color: black;
+        color:white;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .addButton{
+        position:relative;
+        right:0%;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .col {
+        border: none;
+        padding: 0;
+        margin-right: 0;
+        padding: 5px 5px 5px 5px;
+    }
+
+    .col:hover{
+        background-color: black;
+    }
+
+    #footer{
+        position:absolute;
+        width:100%;
+        height:40px;
+        bottom:0%;
+        border-top: 1px solid #e1e1e1;
+    }
+
+    .icons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .add{
+        margin-left: auto;
+    }
+
+    .submenu{
+        display:none;
+        position:absolute;
+        left:10%;
+        bottom:10%;
+    }
+
+    .submenuList{
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: white;
+        padding:0px;
+    }   
+
+    .show{
+        display:block;
+    }
+
+    com esses codigos como eu faço para os submenus aparecem exatamente em cima dos seus menus?
