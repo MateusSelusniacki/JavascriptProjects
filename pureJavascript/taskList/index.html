@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+    <title>Task List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section id="newListScreen" class="hide">
+            <div class="row screenTop">
+                <button class="closeNewListScreen"> X </button>
+                <span class="newListScreenSpan">Create new list</span>
+                <button class="done">Done</button>
+            </div>
+            <div class="row titleNewList">
+                <input placeholder="Enter list title" class="newListScreenInput">
+            </div>
+        </section>
+        <section id="header">
+            <div class="row">
+                <h1>Tasks</h1>
+            </div>
+            <div class="row">
+                <ul id="taskListTitles">
+                    <li><button id="addButton">+ New List</button></li>
+                </ul>
+            </div>
+        </section>
+        <section id="content">
+            <ul id="tasks"></ul>
+        </section>
+        <section id="footer">
+            <div class="row icons-container">
+                <div class="col">
+                    <img class="icon" src="images/listsIcon.png" data-target="lists">
+                    <nav id="lists" class="submenu">
+                        <ul class="submenuList">
+                            <li><button id="btnList" class="submenuButtons title">+ Create new list</button></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                    <img class="icon" src="images/changeListOrder.png" data-target="order">
+                    <nav id="order" class="submenu">
+                        <ul class="submenuList">
+                            <h4>Sort list</h4>
+                            <li><button id="myOrder" class="submenuButtons">My order</button></li>
+                            <li><button id="dateOrder" class="submenuButtons">Date</button></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                    <img class="icon" src="images/commands.png" data-target="commands">
+                    <nav id="commands" class="submenu">
+                        <ul class="submenuList">
+                            <h4></h4>
+                            <li><button class="renameCommand submenuButtons">Rename list</button></li>
+                            <li><button class="deleteListCommand submenuButtons">Delete list</button></li>
+                            <li><button class="deleteAllCommand submenuButtons">Delete all completed tasks</button></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col add">
+                    <img class="icon" src="images/add.png" data-target="newList">
+                    <nav id="newList" class="submenu">
+                        <ul class="submenuList">
+                            <h4>Create new task</h4><li>
+                                <input id="newListFromFotter" class="inputList">
+                            </li><button id="btnCriar" class="btnCriar">criar</button:>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

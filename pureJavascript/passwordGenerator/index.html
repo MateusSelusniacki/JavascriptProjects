@@ -1,0 +1,60 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8"/>
+        <title>Password Generator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col">
+                        <h1 id="title">Password Generator</h1>
+                    </div>
+                </div>
+                <div class="row password">
+                    <div class="col">
+                        <span id="password"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input id="sliderCharacteresQuantity" 
+                            type="range" 
+                            min="1" 
+                            max="30" 
+                            value="15"
+                            oninput='updateValue(this.value)'
+                            >
+                        <span id="slider-value">15</span> <span>&nbspCharacteres</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input id="letters" type="checkbox" value="Letters">
+                        <span>Letters</span>
+                    </div>
+                    <div class="col">
+                        <input id="numbers" type="checkbox" value="Numbers">
+                        <span>Numbers</span>
+                    </div>
+                    <div class="col">
+                        <input id="symbols" type="checkbox" value="Symbols">
+                        <span>Symbols</span>
+                    </div>
+                    <div class="col">
+                        <input id="specialCharacteres" type="checkbox" value="Special Characteres">
+                        <span>Special Characteres</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button id="generateButton" class="button">Generate Password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+    </html>

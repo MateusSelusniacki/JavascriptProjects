@@ -1,0 +1,3 @@
+Cronometer project. 
+Three buttons to control the cronometer.
+Start, Stop Restart, Pretty intuitive...

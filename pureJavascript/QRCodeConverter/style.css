@@ -1,0 +1,42 @@
+h1 {
+    display:none;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.container {
+    background-color: white;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+.row {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    padding:10px;
+    font-size:30px;
+}
+
+.input {    
+    border:1px solid #ccc;
+}
+
+.input:focus {
+    outline:none;
+    border:1px solid #ccc;
+}
+
+.btn {
+    background-color: #61AEFF;
+    border:none;
+    border-radius: 15px;
+    height: 30px;
+    color:white;
+}
